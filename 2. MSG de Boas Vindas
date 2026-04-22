@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Pergunta o nome ao usuário
+        Console.Write("Qual é o seu nome? ");
+        
+        // Lê o nome digitado e armazena em uma variável do tipo string
+        string nome = Console.ReadLine();
+        
+        // Exibe a mensagem de boas-vindas usando interpolação de strings ($"")
+        Console.WriteLine($"Olá {nome}, é um prazer te conhecer!");
+    }
+}
