@@ -1,0 +1,26 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        // Configura o console para aceitar pontos e vírgulas de acordo com a região
+        // ou você pode forçar um padrão específico.
+        Console.Write("Nome do Funcionário: ");
+        string nome = Console.ReadLine();
+
+        Console.Write("Salário: ");
+        // Usamos decimal.Parse com CultureInfo para garantir a leitura correta de decimais
+        decimal salario = decimal.Parse(Console.ReadLine(), CultureInfo.CurrentCulture);
+
+        // Obtendo o nome do mês atual (opcional, conforme o seu exemplo)
+        string mesAtual = DateTime.Now.ToString("MMMM", new CultureInfo("pt-BR"));
+        // Para deixar a primeira letra maiúscula
+        mesAtual = char.ToUpper(mesAtual[0]) + mesAtual.Substring(1);
+
+        Console.WriteLine("\n------------------------------------------------");
+        Console.WriteLine($"O funcionário {nome} tem um salário de R${salario:N2} em {mesAtual}.");
+        Console.WriteLine("------------------------------------------------");
+    }
+}
