@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicita o primeiro valor
+        Console.Write("Digite um valor: ");
+        int n1 = int.Parse(Console.ReadLine());
+
+        // Solicita o segundo valor
+        Console.Write("Digite outro valor: ");
+        int n2 = int.Parse(Console.ReadLine());
+
+        // Realiza a soma
+        int soma = n1 + n2;
+
+        // Exibe o resultado formatado
+        Console.WriteLine($"A soma entre {n1} e {n2} é igual a {soma}.");
+    }
+}
